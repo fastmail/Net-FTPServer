@@ -1,7 +1,5 @@
 #!/usr/bin/perl -w
 
-# $Id: 350generatorlist.t,v 1.1 2003/09/28 11:50:45 rwmj Exp $
-
 use strict;
 use Test;
 use POSIX qw(dup2);
@@ -9,7 +7,7 @@ use IO::Handle;
 use FileHandle;
 
 BEGIN {
-  plan tests => 22;
+  plan tests => 20;
 }
 
 use Net::FTPServer::InMem::Server;
@@ -64,7 +62,6 @@ my $port = $1 * 256 + $2;
 #   sub1/
 #   sub2/
 #   sub3/
-#     INSTALL
 #   Makefile.PL
 #   README
 print OUTFD0 "MKD dir\r\n";
@@ -94,8 +91,6 @@ print OUTFD0 "CWD sub3\r\n";
 $_ = <INFD1>;
 ok (/^250/);
 
-ok (upload_file ("INSTALL"));
-
 print OUTFD0 "CWD /\r\n";
 $_ = <INFD1>;
 ok (/^250/);
@@ -124,7 +119,6 @@ ok ($results[2] eq "/dir/README");
 ok ($results[3] eq "/dir/sub1/");
 ok ($results[4] eq "/dir/sub2/");
 ok ($results[5] eq "/dir/sub3/");
-ok ($results[6] eq "/dir/sub3/INSTALL");
 
 unlink $tmpfile;
 

@@ -18,8 +18,6 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-# $Id: Server.pm,v 1.1 2003/09/28 11:50:45 rwmj Exp $
-
 =pod
 
 =head1 NAME
@@ -39,8 +37,6 @@ is used mainly for automatic testing in the test suites (see the
 C<t/> directory in the distribution).
 
 =head1 METHODS
-
-=over 4
 
 =cut
 
@@ -113,8 +109,6 @@ sub root_directory_hook
 
 __END__
 
-=back 4
-
 =head1 FILES
 
   /etc/ftpd.conf
@@ -137,6 +131,6 @@ London, SW6 3EG, UK
 
 =head1 SEE ALSO
 
-L<Net::FTPServer(3)>.
+C<Net::FTPServer(3)>.
 
 =cut

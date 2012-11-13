@@ -17,8 +17,6 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-# $Id: Server.pm,v 1.1 2003/10/17 14:40:37 rwmj Exp $
-
 =pod
 
 =head1 NAME
@@ -65,8 +63,6 @@ To proxy multiple servers using IP-based virtual hosts, use:
  </Host>
 
 =head1 METHODS
-
-=over 4
 
 =cut
 
@@ -155,8 +151,6 @@ sub root_directory_hook
 
 __END__
 
-=back 4
-
 =head1 FILES
 
   /etc/ftpd.conf
@@ -178,6 +172,6 @@ Copyright (C) 2003 Richard Jones E<lt>rich@annexia.orgE<gt>
 
 =head1 SEE ALSO
 
-L<Net::FTPServer(3)>.
+C<Net::FTPServer(3)>.
 
 =cut

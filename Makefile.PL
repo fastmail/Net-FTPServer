@@ -1,4 +1,3 @@
-# $Id: Makefile.PL,v 1.5 2005/02/22 16:17:31 rwmj Exp $
 # -*- perl -*-
 
 # Net::FTPServer A Perl FTP Server
@@ -209,7 +208,7 @@ my @args = (
 	    dist =>
 	    {
 	     COMPRESS => 'gzip --force --best',
-	     PREOP => 'cp Net-FTPServer.spec $(DISTVNAME)',
+#	     PREOP => 'cp Net-FTPServer.spec $(DISTVNAME)',
 	    },
 
 	    clean =>
@@ -219,12 +218,12 @@ my @args = (
 
 	    realclean =>
 	    {
-	     FILES => 'Net-FTPServer.spec',
+#	     FILES => 'Net-FTPServer.spec',
 	    },
 
 	    depend =>
 	    {
-	     dist => 'Net-FTPServer.spec',
+#	     dist => 'Net-FTPServer.spec',
 	     #'Net-FTPServer.spec' => "lib/Net/FTPServer.pm",
 	     #Makefile => "lib/Net/FTPServer.pm",
 	    },
@@ -293,9 +292,9 @@ install ::
 	@if [ ! "${NOCONF}" ]; then \
           mkdir -p $(sysconfdir); \
 	  if [ ! -f $(sysconfdir)/ftpd.conf ]; then \
-	    install -c -m 0644 ftpd.conf $(sysconfdir)/ftpd.conf; \
+	    install -c -m 0644 etc/ftpd.conf $(sysconfdir)/ftpd.conf; \
 	  else \
-	    install -c -m 0644 ftpd.conf $(sysconfdir)/ftpd.conf.new; \
+	    install -c -m 0644 etc/ftpd.conf $(sysconfdir)/ftpd.conf.new; \
 	    echo "Old configuration file $(sysconfdir)/ftpd.conf not overwritten."; \
 	    echo "New configuration file installed as $(sysconfdir)/ftpd.conf.new"; \
 	  fi; \

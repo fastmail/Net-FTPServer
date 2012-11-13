@@ -1,7 +1,5 @@
 #!/usr/bin/perl -w
 
-# $Id: 240abort.t,v 1.2 2004/12/01 13:00:50 rwmj Exp $
-
 use strict;
 use Test;
 use POSIX qw(dup2);
@@ -69,9 +67,9 @@ foreach my $mode ('A', 'I')
        Proto => "tcp")
 	or die "socket: $!";
 
-    for (my $i = 0; $i < 10000; ++$i)
+    for (my $i = 0; $i < 50_000; ++$i)
       {
-	$sock->print ("This is line $i.\r\n");
+	$sock->printf ("This is line %d. %s\r\n", $i, "a" x 1_000);
       }
     $sock->close;
 

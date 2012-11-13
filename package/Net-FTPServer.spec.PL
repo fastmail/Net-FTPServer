@@ -1,6 +1,5 @@
 # Copyright (C) 1999 Bibliotech Ltd., 631-633 Fulham Rd., London SW6 5UQ.
 #
-# $Id: Net-FTPServer.spec.PL,v 1.1 2003/09/28 11:50:44 rwmj Exp $
 
 use strict;
 
@@ -77,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}-man
 %defattr(-,root,root)
-%doc AUTHORS COPYING FAQ INSTALL README TODO doc/*
+%doc AUTHORS COPYING README Changes TODO doc/*
 %{perlsitelib}/Net/FTPServer.pm
 %{perlsitelib}/Net/FTPServer/
 /usr/sbin/*.pl

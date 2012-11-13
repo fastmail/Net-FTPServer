@@ -18,8 +18,6 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-# $Id: Server.pm,v 1.1 2003/09/28 11:50:45 rwmj Exp $
-
 =pod
 
 =head1 NAME
@@ -39,8 +37,6 @@ except that it is not possible to write and all logins
 must be anonymous.
 
 =head1 METHODS
-
-=over 4
 
 =cut
 
@@ -69,6 +65,8 @@ sub pre_configuration_hook
   }
 
 =pod
+
+=over 4
 
 =item $rv = $self->authentication_hook ($user, $pass, $user_is_anon)
 
@@ -135,7 +133,7 @@ sub root_directory_hook
 
 __END__
 
-=back 4
+=back
 
 =head1 FILES
 
@@ -159,9 +157,9 @@ London, SW6 3EG, UK
 
 =head1 SEE ALSO
 
-L<Net::FTPServer(3)>,
-L<Net::FTP(3)>,
-L<perl(1)>,
+C<Net::FTPServer(3)>,
+C<Net::FTP(3)>,
+C<perl(1)>,
 RFC 765,
 RFC 959,
 RFC 1579,

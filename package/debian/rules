@@ -47,7 +47,7 @@ clean:
 
 	dh_clean
 
-install: 
+install:
 	dh_testdir
 	dh_testroot
 	dh_clean -k
@@ -75,7 +75,7 @@ binary-arch: build install
 	dh_installcron
 	dh_installmanpages
 #	dh_undocumented
-	dh_installchangelogs 
+	dh_installchangelogs
 	dh_link
 	dh_strip
 	dh_compress -X.txt
@@ -88,7 +88,7 @@ binary-arch: build install
 	dh_md5sums
 	dh_builddeb --destdir="$(DESTDIR)"
 
-source diff:                                                                  
+source diff:
 	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
 
 binary: binary-indep binary-arch
