@@ -48,10 +48,11 @@
             "POSIX" : "0",
             "Socket" : "0",
             "Sys::Hostname" : "0",
-            "Sys::Syslog" : "0"
+            "Sys::Syslog" : "0",
+            "Test::More" : "0"
          }
       }
    },
    "release_status" : "stable",
-   "version" : "1.123"
+   "version" : "1.124"
 }

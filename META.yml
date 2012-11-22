@@ -35,4 +35,5 @@ requires:
   Socket: 0
   Sys::Hostname: 0
   Sys::Syslog: 0
-version: 1.123
+  Test::More: 0
+version: 1.124
