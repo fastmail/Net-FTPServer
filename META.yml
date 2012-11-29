@@ -3,12 +3,12 @@ abstract: unknown
 author:
   - unknown
 build_requires:
-  ExtUtils::MakeMaker: 0
+  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 0
 dynamic_config: 1
 generated_by: 'ExtUtils::MakeMaker version 6.62, CPAN::Meta::Converter version 2.120921'
-license: unknown
+license: open_source
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -35,5 +35,7 @@ requires:
   Socket: 0
   Sys::Hostname: 0
   Sys::Syslog: 0
-  Test::More: 0
-version: 1.124
+  perl: 5.005
+resources:
+  repository: https://github.com/ryochin/p5-net-ftpserver
+version: 1.125
