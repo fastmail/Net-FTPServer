@@ -6918,7 +6918,7 @@ sub _LANG_command
     # (b) there are all sorts of possible libc exploits available if
     # the user is allowed to set this to arbitrary values.
     unless (length ($rest) <= 8 &&
-	    $rest =~ /^[A-Z]{1,8}(-[A-Z]{1-8})*$/i)
+	    $rest =~ /^[A-Z]{1,8}(-[A-Z]{1,8})*$/i)
       {
 	$self->reply (504, "Incorrect language.");
 	return;
