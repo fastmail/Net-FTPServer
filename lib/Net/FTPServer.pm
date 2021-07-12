@@ -4503,6 +4503,7 @@ sub _AUTH_command
       {
 	$self->{tls_control} = 1;
 	$self->{tls_type} = $ucr;
+	$self->log("notice", "connection upgraded to secure socket");
       }
     else
       {
